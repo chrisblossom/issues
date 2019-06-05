@@ -1,11 +1,9 @@
 {
     "fileManager": {
         "directories": [
-            ".circleci",
             "app"
         ],
         "files": {
-            ".circleci/config.yml": "0845f9fe3b3f3b12db57e4dbe68ca66fa0c7464cfe717112682a30a099096285",
             ".editorconfig": "ec4ed6b0bd85bf29162eccef4420c8b03bd330e8abd84d7a14b2cae3079f1fd9",
             ".eslintignore": "df678e7a458aba93c115564cfd4a701bdf4397e943de8745d37f2798c1dc5c11",
             ".eslintrc.js": "d29084d1d0cbcc3982525eae881e6e797d1c64be4c6937ab43fb134750c6207d",

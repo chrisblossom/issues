@@ -4,6 +4,7 @@ module.exports = {
     presets: [['@backtrack/node', { mode: 'app', syntax: 'node' }]],
 
     files: {
-        allowChanges: ['wallaby.config.js', '.prettierignore'],
+        skip: ['.circleci/config.yml'],
+        allowChanges: true,
     },
 };

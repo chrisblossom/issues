@@ -6,21 +6,11 @@
  *
  * DO NOT MODIFY
  */
-
 'use strict';
 
-const { Backtrack } = require('@backtrack/core');
-
-const { configManager } = new Backtrack();
-
-const husky = {
+module.exports = {
     hooks: {
         'pre-commit': 'npm run git-pre-commit',
         'pre-push': 'npm run git-pre-push',
     },
 };
-
-module.exports = configManager({
-    namespace: 'husky',
-    config: husky,
-});

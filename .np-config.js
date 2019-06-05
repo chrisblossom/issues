@@ -9,15 +9,6 @@
 
 'use strict';
 
-const { Backtrack } = require('@backtrack/core');
-
-const { configManager } = new Backtrack();
-
-const np = {
+module.exports = {
     yarn: false,
 };
-
-module.exports = configManager({
-    namespace: 'np',
-    config: np,
-});

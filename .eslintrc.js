@@ -9,17 +9,6 @@
 
 'use strict';
 
-const { Backtrack } = require('@backtrack/core');
-
-const { configManager, pkg } = new Backtrack();
-
-const packageId = '@backtrack/preset-style';
-
-const eslint = {
-    extends: [pkg.resolve(packageId, '@chrisblossom/eslint-config/node')],
+module.exports = {
+    extends: [require.resolve('@chrisblossom/eslint-config/node')],
 };
-
-module.exports = configManager({
-    namespace: 'eslint',
-    config: eslint,
-});
