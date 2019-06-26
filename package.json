@@ -1,0 +1,56 @@
+{
+  "name": "jest-issue-8611",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisblossom/issues.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrisblossom/issues/issues"
+  },
+  "homepage": "https://github.com/chrisblossom/issues#readme",
+  "author": "",
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "files": [
+    "dist/"
+  ],
+  "main": "dist/jest-issue-8611.js",
+  "types": "dist/jest-issue-8611.d.ts",
+  "scripts": {
+    "build": "backtrack build --production",
+    "clean": "backtrack clean",
+    "dev": "backtrack dev --development",
+    "format": "backtrack format",
+    "git-pre-commit": "backtrack git-pre-commit",
+    "git-pre-push": "backtrack git-pre-push",
+    "lint": "backtrack lint",
+    "lint.fix": "backtrack lint.fix",
+    "prepublishOnly": "backtrack prepublishOnly",
+    "release": "backtrack release",
+    "test": "backtrack test",
+    "test.ci": "backtrack test.ci",
+    "test.ci-pretest": "backtrack test.ci-pretest",
+    "test.update": "jest --update-snapshot",
+    "test.watch": "jest --watch",
+    "typescript": "backtrack typescript"
+  },
+  "devDependencies": {
+    "@backtrack/core": "0.2.1",
+    "@backtrack/preset-node": "0.5.1",
+    "@types/jest": "24.0.15",
+    "@types/node": "12.0.10",
+    "typescript": "3.5.2"
+  },
+  "dependencies": {
+    "del": "4.1.1",
+    "jest": "24.8.0",
+    "make-dir": "3.0.0",
+    "move-file": "1.2.0"
+  }
+}
