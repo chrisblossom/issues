@@ -3,16 +3,27 @@ import os from 'os';
 import path from 'path';
 import { sync as makeDirSync } from 'make-dir';
 import { sync as delSync } from 'del';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { waitForMs } from './wait-for-ms';
 import { renameFilesToTypescript as renameFilesToTypescriptActual } from './jest-issue-8611';
 
 const osTempDir = os.tmpdir();
 
-// eslint-disable-next-line @typescript-eslint/promise-function-async
-const renameFilesToTypescript: typeof renameFilesToTypescriptActual = (
+const renameFilesToTypescript: typeof renameFilesToTypescriptActual = async (
     ...params
-) => require('./jest-issue-8611').renameFilesToTypescript(...params);
+) => {
+    try {
+        const result = await require('./jest-issue-8611').renameFilesToTypescript(
+            ...params,
+        );
+
+        return result;
+    } catch (error) {
+        // this is the best place wait to fix the cleanup issue
+        // await waitForMs(1000);
+
+        throw error;
+    }
+};
 
 /**
  * NOTE: all checks, setup, and teardown is sync
