@@ -1,11 +1,11 @@
 {
-  "name": "",
+  "name": "eslint-plugin-jest-issue-283",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/chrisblossom/issues/issues"
   },
-  "homepage": "https://github.com/chrisblossom/issues#readme"
+  "homepage": "https://github.com/chrisblossom/issues#readme",
+  "dependencies": {
+    "@babel/core": "7.5.4",
+    "@babel/preset-env": "7.5.4",
+    "babel-jest": "24.8.0",
+    "jest": "24.8.0"
+  }
 }
